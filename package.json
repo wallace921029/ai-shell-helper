@@ -1,0 +1,35 @@
+{
+  "name": "ai-shell-helper",
+  "version": "0.1.0",
+  "description": "AI-powered CLI that turns a plain-language description (or a command from another platform) into a ready-to-run command for your shell.",
+  "type": "module",
+  "bin": {
+    "ash": "./bin/ash.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "cli",
+    "ai",
+    "shell",
+    "powershell",
+    "bash",
+    "zsh",
+    "fish",
+    "command-generator",
+    "openai"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^1.8.0",
+    "clipboardy": "^5.3.2",
+    "picocolors": "^1.1.1"
+  }
+}
