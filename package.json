@@ -3,8 +3,16 @@
   "version": "0.1.0",
   "description": "AI-powered CLI that turns a plain-language description (or a command from another platform) into a ready-to-run command for your shell.",
   "type": "module",
+  "homepage": "https://github.com/wallace921029/ai-shell-helper#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wallace921029/ai-shell-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wallace921029/ai-shell-helper/issues"
+  },
   "bin": {
-    "ash": "./bin/ash.js"
+    "ash": "bin/ash.js"
   },
   "files": [
     "bin",
