@@ -99,6 +99,7 @@ happens.
 | `ash init`                   | Configure base URL, API key, and model ID                 |
 | `ash target`                 | Choose the target shell                                   |
 | `ash clipboard [on\|off]`    | Toggle/set auto-copy to clipboard                          |
+| `ash reset`                  | Clear all saved config (API key, model, target, clipboard) |
 | `ash -c`, `--chat`           | One-shot conversational Q&A (no command generation)        |
 | `ash -lc`, `--loop-chat`     | Multi-turn chat with context; exit with Ctrl+C             |
 | `ash --version`, `-v`        | Print the installed version                                |
@@ -109,6 +110,16 @@ happens.
 Config (including your API key) is stored in plaintext at
 `~/.ash/config.json`. Keep this file private — don't commit it or share it,
 and be extra careful on shared machines.
+
+To wipe it and return ash to a completely unconfigured state (e.g. to switch
+accounts or start over), run:
+
+```
+ash reset
+```
+
+This asks for confirmation, then deletes `~/.ash/config.json`. You'll need to
+run `ash init` again before using ash afterward.
 
 ## License
 

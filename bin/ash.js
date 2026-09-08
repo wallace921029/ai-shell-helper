@@ -24,6 +24,11 @@ async function main() {
       await runClipboard(rest[0]);
       break;
     }
+    case "reset": {
+      const { runReset } = await import("../src/commands/reset.js");
+      await runReset();
+      break;
+    }
     case "-c":
     case "--chat": {
       const { runChatOnce } = await import("../src/commands/chat.js");
@@ -66,6 +71,7 @@ Usage:
   ash init               Configure the AI model (base URL, API key, model ID).
   ash target             Choose which shell ash should generate commands for.
   ash clipboard          Toggle auto-copying generated commands to the clipboard.
+  ash reset              Clear all saved configuration (API key, model, target, clipboard setting).
   ash -c, --chat         Ask one question and get a normal conversational answer (no command generation).
   ash -lc, --loop-chat   Multi-turn chat; keeps context until you press Ctrl+C.
   ash --version          Print the installed version.

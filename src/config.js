@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
 import { defaultTargetId } from "./targets.js";
@@ -38,4 +38,8 @@ export function saveConfig(partial) {
 
 export function configPath() {
   return CONFIG_PATH;
+}
+
+export function resetConfig() {
+  rmSync(CONFIG_PATH, { force: true });
 }
